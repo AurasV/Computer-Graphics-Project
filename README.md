@@ -1,6 +1,13 @@
 # Elemental Basket
 ![image](https://github.com/user-attachments/assets/4a7125fb-dfde-478e-abc1-eee310c2d4d5)
 
+# Created by 
+[Frimu Aurel-Viorel](https://github.com/AurasV)
+
+[Petre Teodora-Maria](https://github.com/730dora)
+
+[Răzvan Andrei-Timofte](https://github.com/razandtim)
+
 # About the game
 Elemental Basket is a fast-paced 2D arcade game that focuses on reflex. 
 The main idea is that the player is a magical basket that switches colors in order to catch the right falling element (Earth, Air, Fire, Water). 
