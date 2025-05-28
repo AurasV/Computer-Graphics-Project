@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="shader.cpp" />
+    <ClCompile Include="Camera\camera.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="SimpleFragmentShader.fragmentshader" />
+    <None Include="SimpleVertexShader.vertexshader" />
+    <None Include="LightFragmentShader.fragmentshader" />
+    <None Include="LightVertexShader.vertexshader" />
+    <None Include="ParticleVertexShader.vertexshader" />
+    <None Include="ParticleFragmentShader.fragmentshader" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Camera\camera.h" />
+    <ClInclude Include="stb_image.h" />
+    <ClInclude Include="miniaudio.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="textures\air_orb.png" />
+    <Image Include="textures\basket.png" />
+    <Image Include="textures\earth_orb.png" />
+    <Image Include="textures\fire_orb.png" />
+    <Image Include="textures\water_orb.png" />
+  </ItemGroup>
+</Project>

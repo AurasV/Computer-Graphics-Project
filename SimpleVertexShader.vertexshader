@@ -1,0 +1,28 @@
+#version 330 core
+
+// Input vertex data
+layout(location = 0) in vec3 vertexPos;    // Position
+layout(location = 1) in vec3 normalCoords; // Normal (retained, but not used in new fragment shader)
+layout(location = 2) in vec2 texCoordIn;   // Texture coordinates
+
+out vec3 fragPos;   // This is no longer used in the simplified fragment shader, can be removed to optimize
+out vec3 normalRes; // This is no longer used in the simplified fragment shader, can be removed to optimize
+out vec2 texCoord;  // Pass texture coordinates to fragment shader
+
+uniform mat4 model;      // Model matrix (object's position, scale, rotation)
+uniform mat4 view;       // View matrix (camera's position and orientation)
+uniform mat4 projection; // Projection matrix (orthographic or perspective)
+
+void main(){
+    // Calculate fragment position in world space
+    // fragPos = vec3(model * vec4(vertexPos, 1.0)); // No longer needed if lighting is removed
+
+    // Transform normal to world space (only rotation and non-uniform scaling)
+    // normalRes = mat3(transpose(inverse(model))) * normalCoords; // No longer needed if lighting is removed
+
+    // Pass texture coordinates directly
+    texCoord = texCoordIn;
+
+    // Calculate final position in clip space
+    gl_Position = projection * view * model * vec4(vertexPos, 1.0);
+}

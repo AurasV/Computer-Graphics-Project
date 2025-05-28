@@ -1,0 +1,38 @@
+#version 330 core
+layout (location = 0) in vec3 aPos;        // Base quad vertex position
+layout (location = 1) in vec2 aTexCoord;   // Base quad texture coordinate
+
+// Per-instance attributes (for each particle)
+layout (location = 2) in vec3 instancePosition; // Particle's world position
+layout (location = 3) in float instanceLife;    // Normalized life (0.0 at start, 1.0 at end)
+layout (location = 4) in vec4 instanceColor;    // Particle's color (includes alpha)
+layout (location = 5) in float instanceSize;    // Particle's initial size
+
+uniform mat4 view;       // View matrix (from main camera)
+uniform mat4 projection; // Projection matrix (from main camera)
+
+out vec4 particleColor;
+out vec2 TexCoords;
+
+void main()
+{
+    // Calculate particle's current scale based on its life
+    float scaleFactor = instanceSize * (1.0 - instanceLife); // Shrinks to 0
+
+    // Calculate particle's current alpha based on its life
+    particleColor = instanceColor;
+    particleColor.a *= (1.0 - instanceLife); // Linear fade
+
+    // Create a billboard effect: make the quad always face the camera
+    // By multiplying aPos (quad vertex) by scaleFactor and then transforming by viewRotation
+    // we ensure the quad is always aligned with the screen.
+    mat4 viewRotation = view;
+    viewRotation[3][0] = 0.0; // Remove translation component from view matrix
+    viewRotation[3][1] = 0.0;
+    viewRotation[3][2] = 0.0;
+
+    vec3 finalPos = instancePosition + (viewRotation * vec4(aPos, 0.0)).xyz * scaleFactor;
+
+    gl_Position = projection * view * vec4(finalPos, 1.0);
+    TexCoords = aTexCoord;
+}

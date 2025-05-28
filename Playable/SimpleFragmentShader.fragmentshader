@@ -1,0 +1,25 @@
+#version 330 core
+
+in vec2 texCoord;    // Texture coordinates from vertex shader
+
+out vec4 fragColor;
+
+uniform vec4 objectColor;    // Color/tint passed from game objects
+uniform sampler2D textureSampler; // The texture sampler
+uniform int useTexture;      // Flag to indicate if texture should be used (0 = no, 1 = yes)
+
+void main()
+{
+    vec4 finalColor;
+    if (useTexture == 1) {
+        // Sample the texture and apply the objectColor as a tint
+        // This effectively multiplies the texture's color by the objectColor.
+        // If objectColor is (1,1,1,1), it shows the texture as is.
+        finalColor = texture(textureSampler, texCoord) * objectColor;
+    } else {
+        // Just use the objectColor if no texture is provided
+        finalColor = objectColor;
+    }
+    
+    fragColor = finalColor;
+}
