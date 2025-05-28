@@ -1,0 +1,25 @@
+﻿          1 file(s) copied.
+          1 file(s) copied.
+  camera.cpp
+  main.cpp
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\shared\minwindef.h(130,9): warning C4005: 'APIENTRY': macro redefinition
+  (compiling source file 'main.cpp')
+      C:\Uni\Year 3\Semester 2\Computer Graphics\Project\Final Project CG\dependente\glfw\glfw3.h(98,11):
+      see previous definition of 'APIENTRY'
+  
+C:\Uni\Year 3\Semester 2\Computer Graphics\Project\Final Project CG\main.cpp(507,47): warning C4018: '<': signed/unsigned mismatch
+C:\Uni\Year 3\Semester 2\Computer Graphics\Project\Final Project CG\main.cpp(1307,28): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+  shader.cpp
+main.obj : error LNK2001: unresolved external symbol _glfwSwapBuffers
+main.obj : error LNK2001: unresolved external symbol _glfwSetFramebufferSizeCallback
+main.obj : error LNK2001: unresolved external symbol _glfwGetTime
+main.obj : error LNK2001: unresolved external symbol _glfwGetKey
+main.obj : error LNK2001: unresolved external symbol _glfwTerminate
+main.obj : error LNK2001: unresolved external symbol _glfwPollEvents
+main.obj : error LNK2001: unresolved external symbol _glfwInit
+main.obj : error LNK2001: unresolved external symbol _glfwSetScrollCallback
+main.obj : error LNK2001: unresolved external symbol _glfwCreateWindow
+main.obj : error LNK2001: unresolved external symbol _glfwWindowHint
+main.obj : error LNK2001: unresolved external symbol _glfwMakeContextCurrent
+main.obj : error LNK2001: unresolved external symbol _glfwWindowShouldClose
+C:\Uni\Year 3\Semester 2\Computer Graphics\Project\Final Project CG\Release\ACG_Lab6.exe : fatal error LNK1120: 12 unresolved externals

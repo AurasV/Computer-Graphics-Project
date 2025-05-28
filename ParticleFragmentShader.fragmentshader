@@ -1,0 +1,19 @@
+#version 330 core
+out vec4 FragColor;
+
+in vec4 particleColor; // Color (and alpha) from vertex shader
+in vec2 TexCoords;     // Texture coordinates from vertex shader
+
+uniform sampler2D particleTexture;   // The texture for the particle (e.g., a soft circle)
+uniform int useParticleTexture;      // Flag to decide if texture should be used
+
+void main()
+{
+    vec4 finalColor = particleColor;
+    if (useParticleTexture == 1) {
+        // Sample the particle texture and multiply by the particle's color
+        // This tints the white/grayscale particle texture with the desired color.
+        finalColor *= texture(particleTexture, TexCoords);
+    }
+    FragColor = finalColor; // Output the final particle color
+}

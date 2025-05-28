@@ -1,0 +1,23 @@
+﻿          1 file(s) copied.
+          1 file(s) copied.
+  camera.cpp
+  main.cpp
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\shared\minwindef.h(130,9): warning C4005: 'APIENTRY': macro redefinition
+  (compiling source file 'main.cpp')
+      C:\Uni\Year 3\Semester 2\Computer Graphics\Git Project\dependente\glfw\glfw3.h(98,11):
+      see previous definition of 'APIENTRY'
+  
+C:\Uni\Year 3\Semester 2\Computer Graphics\Git Project\main.cpp(366,64): warning C4305: 'argument': truncation from 'double' to '_Ty'
+C:\Uni\Year 3\Semester 2\Computer Graphics\Git Project\main.cpp(366,64): warning C4305:         with
+C:\Uni\Year 3\Semester 2\Computer Graphics\Git Project\main.cpp(366,64): warning C4305:         [
+C:\Uni\Year 3\Semester 2\Computer Graphics\Git Project\main.cpp(366,64): warning C4305:             _Ty=float
+C:\Uni\Year 3\Semester 2\Computer Graphics\Git Project\main.cpp(366,64): warning C4305:         ]
+C:\Uni\Year 3\Semester 2\Computer Graphics\Git Project\main.cpp(388,21): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Uni\Year 3\Semester 2\Computer Graphics\Git Project\main.cpp(406,22): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Uni\Year 3\Semester 2\Computer Graphics\Git Project\main.cpp(407,22): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Uni\Year 3\Semester 2\Computer Graphics\Git Project\main.cpp(573,47): warning C4018: '<': signed/unsigned mismatch
+C:\Uni\Year 3\Semester 2\Computer Graphics\Git Project\main.cpp(1204,29): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Uni\Year 3\Semester 2\Computer Graphics\Git Project\main.cpp(1350,28): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+  shader.cpp
+  Generating Code...
+  Lab7.vcxproj -> C:\Uni\Year 3\Semester 2\Computer Graphics\Git Project\Debug\ACG_Lab6.exe
